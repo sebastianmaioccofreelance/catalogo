@@ -62,8 +62,6 @@ body {
       text-decoration: none;
       font-weight: bold;
       transition: background 0.3s;
-      margin-right: 8px;
-      margin-left: 7px;
     }
 
     .catalogo {
@@ -91,7 +89,7 @@ body {
   flex-wrap: wrap;
   list-style: none;
   margin: 0;
-  padding: 5px;
+  padding: 0;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: 1rem;
 }
@@ -104,13 +102,15 @@ body {
 .card_image {
   display: flex;
   height: 250px;
-  box-shadow: 0 50px 100px 0 var(--violet);
+  /* box-shadow: 0 50px 100px 0 var(--violet); */
+
 }
 
 .card_image img {
   display: block;
   width: 100%;
   height: auto;
+  box-shadow: 2px 8px 10px rgba(29, 1, 68, 0.5); 
   /* object-fit: cover; */
 }
 
