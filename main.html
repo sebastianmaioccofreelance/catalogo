@@ -28,6 +28,7 @@
 <script>
   const packs = [
     {
+      ancla:"saludable",
       imagen: "img/packs/Pack-recetas-saludables.PNG",
       titulo: "Pack de recetas saludables",
       resumen: "Recetas en PDF a todo color!",
@@ -35,6 +36,7 @@
       precio: "$2.000"
     },
     {
+      ancla:"dinosaurios",
       imagen: "img/packs/pack-dinosaurios.PNG",
       titulo: "Pack enciclopedias sobre dinosaurios",
       resumen: "Todo sobre dinosaurios!",
@@ -42,6 +44,7 @@
       precio: "$2.000"
     },
     {
+      ancla:"pack 3",
       imagen: "img/packs/Pack-recetas-saludables.PNG",
       titulo: "Pack de comidas saludables 3",
       resumen: "Recetas en PDF a todo color!",
@@ -49,6 +52,7 @@
       precio: "$2.000"
     },
     {
+      ancla:"pack 4",
       imagen: "img/packs/Pack-recetas-saludables.PNG",
       titulo: "Pack de comidas saludables 4",
       resumen: "Recetas en PDF a todo color!",
@@ -58,29 +62,30 @@
   ];
 
   const container = document.getElementById("cardsContainer");
+packs.forEach(pack => {
+  const li = document.createElement("li");
+  li.classList.add("cards_item");
+  li.id = pack.titulo.toLowerCase().replace(/\s+/g, '_'); // genera un id basado en el título
 
-  packs.forEach(pack => {
-    const li = document.createElement("li");
-    li.classList.add("cards_item");
-
-    li.innerHTML = `
-      <div class="card" tabindex="0">
-        <div class="card_image">
-          <img src="${pack.imagen}" alt="${pack.titulo}">
-        </div>
-        <div class="card_content">
-          <h2 class="card_title">${pack.titulo}</h2>
-          <div class="card_text">
-            <p>${pack.resumen}</p>
-            <p>Este pack incluye: <strong>${pack.detalle}</strong></p>
-            <p class="note">${pack.precio}</p>
-          </div>
+  li.innerHTML = `
+    <div class="card" tabindex="0" >
+      <div class="card_image">
+        <img src="${pack.imagen}" alt="${pack.titulo}">
+      </div>
+      <div class="card_content">
+        <h2 class="card_title">${pack.titulo}</h2>
+        <div class="card_text">
+          <p>${pack.resumen}</p>
+          <p>Este pack incluye: <strong>${pack.detalle}</strong></p>
+          <p class="note">${pack.precio}</p>
         </div>
       </div>
-    `;
+    </div>
+  `;
 
-    container.appendChild(li);
-  });
+  container.appendChild(li);
+});
+
 </script>
 
 </body>
