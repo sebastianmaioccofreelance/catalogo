@@ -3,83 +3,85 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  
+  <title>Catálogo Packs</title>
   <link rel="stylesheet" type="text/css" href="css/styles.css">
 </head>
 <body>
 
 <section>
-<header class="hero">
-  <div class="hero-content">
-     <h1>CATALOGO PACKS DIGITAL</h1>
-    <p>¡Descubrí tu pack al mejor precio del mercado!</p> 
-    
-    <!-- <a href="#catalogo" class="btn">Ver productos</a>  -->
-  </div>
-  <!-- <svg class="wave" viewBox="0 0 500 150" preserveAspectRatio="none">
-    <path d="M0,0 C150,100 350,0 500,100 L500,0 L0,0 Z" fill="#a3303b"></path>
-  </svg> -->
-</header>
+  <header class="hero">
+    <div class="hero-content">
+      <h1>CATALOGO PACKS DIGITAL</h1>
+      <p>¡Descubrí tu pack al mejor precio del mercado!</p>
+    </div>
+  </header>
 </section>
 
-  <section>
+<section>
   <div class="main">
-  <ul class="cards">
-    <li class="cards_item">
-      <div class="card" tabindex="0">
-        <div class="card_image"><img src="img/packs/Pack-recetas-saludables.PNG" alt="mixed vegetable salad in a mason jar. "></div>
-        <div class="card_content">
-          <h2 class="card_title">Pack de comidas saludables</h2>
-          <div class="card_text">
-            <p>Recetas en PDF a todo color!</p>
-            <p>Este pack incluye: <strong>housemade ranch, cherry balsamic vinaigrette, creamy chipotle, avocado green goddess, or honey mustard.</strong></p>
-            <p class="note">$2.000</p>
-          </div>
-        </div>
-      </div>
-    </li>
-        <li class="cards_item">
-      <div class="card" tabindex="0">
-        <div class="card_image"><img src="img/packs/Pack-recetas-saludables.PNG" alt="mixed vegetable salad in a mason jar. "></div>
-        <div class="card_content">
-          <h2 class="card_title">Pack de comidas saludables</h2>
-          <div class="card_text">
-            <p>Recetas en PDF a todo color!</p>
-            <p>Este pack incluye: <strong>housemade ranch, cherry balsamic vinaigrette, creamy chipotle, avocado green goddess, or honey mustard.</strong></p>
-            <p class="note">$2.000</p>
-          </div>
-        </div>
-      </div>
-    </li>
-        <li class="cards_item">
-      <div class="card" tabindex="0">
-        <div class="card_image"><img src="img/packs/Pack-recetas-saludables.PNG" alt="mixed vegetable salad in a mason jar. "></div>
-        <div class="card_content">
-          <h2 class="card_title">Pack de comidas saludables</h2>
-          <div class="card_text">
-            <p>Recetas en PDF a todo color!</p>
-            <p>Este pack incluye: <strong>housemade ranch, cherry balsamic vinaigrette, creamy chipotle, avocado green goddess, or honey mustard.</strong></p>
-            <p class="note">$2.000</p>
-          </div>
-        </div>
-      </div>
-    </li>
-        <li class="cards_item">
-      <div class="card" tabindex="0">
-        <div class="card_image"><img src="img/packs/Pack-recetas-saludables.PNG" alt="mixed vegetable salad in a mason jar. "></div>
-        <div class="card_content">
-          <h2 class="card_title">Pack de comidas saludables</h2>
-          <div class="card_text">
-            <p>Recetas en PDF a todo color!</p>
-            <p>Este pack incluye: <strong>housemade ranch, cherry balsamic vinaigrette, creamy chipotle, avocado green goddess, or honey mustard.</strong></p>
-            <p class="note">$2.000</p>
-          </div>
-        </div>
-      </div>
-    </li>
+    <ul class="cards" id="cardsContainer">
+      <!-- Las tarjetas se insertan con JavaScript -->
+    </ul>
+  </div>
+</section>
 
-  </ul>
-  </section>
-</div>  
+<script>
+  const packs = [
+    {
+      imagen: "img/packs/Pack-recetas-saludables.PNG",
+      titulo: "Pack de comidas saludables",
+      resumen: "Recetas en PDF a todo color!",
+      detalle: "Incluye: housemade ranch, cherry balsamic vinaigrette, creamy chipotle, avocado green goddess, or honey mustard.",
+      precio: "$2.000"
+    },
+    {
+      imagen: "img/packs/pack-dinosaurios.PNG",
+      titulo: "Pack de comidas saludables 2",
+      resumen: "Recetas en PDF a todo color!",
+      detalle: "Incluye: housemade ranch, cherry balsamic vinaigrette, creamy chipotle, avocado green goddess, or honey mustard.",
+      precio: "$2.000"
+    },
+    {
+      imagen: "img/packs/Pack-recetas-saludables.PNG",
+      titulo: "Pack de comidas saludables 3",
+      resumen: "Recetas en PDF a todo color!",
+      detalle: "Incluye: housemade ranch, cherry balsamic vinaigrette, creamy chipotle, avocado green goddess, or honey mustard.",
+      precio: "$2.000"
+    },
+    {
+      imagen: "img/packs/Pack-recetas-saludables.PNG",
+      titulo: "Pack de comidas saludables 4",
+      resumen: "Recetas en PDF a todo color!",
+      detalle: "Incluye: housemade ranch, cherry balsamic vinaigrette, creamy chipotle, avocado green goddess, or honey mustard.",
+      precio: "$2.000"
+    }
+  ];
+
+  const container = document.getElementById("cardsContainer");
+
+  packs.forEach(pack => {
+    const li = document.createElement("li");
+    li.classList.add("cards_item");
+
+    li.innerHTML = `
+      <div class="card" tabindex="0">
+        <div class="card_image">
+          <img src="${pack.imagen}" alt="${pack.titulo}">
+        </div>
+        <div class="card_content">
+          <h2 class="card_title">${pack.titulo}</h2>
+          <div class="card_text">
+            <p>${pack.resumen}</p>
+            <p>Este pack incluye: <strong>${pack.detalle}</strong></p>
+            <p class="note">${pack.precio}</p>
+          </div>
+        </div>
+      </div>
+    `;
+
+    container.appendChild(li);
+  });
+</script>
+
 </body>
 </html>
