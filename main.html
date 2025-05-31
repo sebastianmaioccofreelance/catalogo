@@ -37,6 +37,7 @@
       ancla:"saludable",
       imagen: "img/packs/Pack-recetas-saludables.PNG",
       titulo: "Pack de recetas saludables",
+      url:"https://www.mercadolibre.com.ar/termo-media-manija-1-l-acero-inoxidable-pico-matero-cebador-color-plateado/p/MLA22211716#reco_item_pos=0&reco_backend=item_decorator&reco_backend_type=function&reco_client=home_items-decorator-legacy&reco_id=6c3198f8-cd57-45fa-87b2-b9faf1d30a79&reco_model=&c_id=/home/bookmarks-recommendations-seed/element&c_uid=8059d461-65c7-41bc-8f5d-031cef3fb992&da_id=bookmark&da_position=0&id_origin=/home/dynamic_access&da_sort_algorithm=ranker",
       resumen: "Recetas en PDF a todo color!",
       detalle: "Incluye: housemade ranch, cherry balsamic vinaigrette, creamy chipotle, avocado green goddess, or honey mustard.",
       precio: "$2.000"
@@ -45,6 +46,7 @@
       ancla:"dinosaurios",
       imagen: "img/packs/pack-dinosaurios.PNG",
       titulo: "Pack enciclopedias sobre dinosaurios",
+      url:"https://www.mercadolibre.com.ar/termo-media-manija-1-l-acero-inoxidable-pico-matero-cebador-color-plateado/p/MLA22211716#reco_item_pos=0&reco_backend=item_decorator&reco_backend_type=function&reco_client=home_items-decorator-legacy&reco_id=6c3198f8-cd57-45fa-87b2-b9faf1d30a79&reco_model=&c_id=/home/bookmarks-recommendations-seed/element&c_uid=8059d461-65c7-41bc-8f5d-031cef3fb992&da_id=bookmark&da_position=0&id_origin=/home/dynamic_access&da_sort_algorithm=ranker",
       resumen: "Todo sobre dinosaurios!",
       detalle: "Incluye: Enciclopedias, imagenes para colerar, pedagogía para niños, cuentos, manualidades, fondos y mas.",
       precio: "$2.000"
@@ -53,6 +55,7 @@
       ancla:"pack 3",
       imagen: "img/packs/Pack-recetas-saludables.PNG",
       titulo: "Pack de comidas saludables 3",
+      url:"https://www.mercadolibre.com.ar/termo-media-manija-1-l-acero-inoxidable-pico-matero-cebador-color-plateado/p/MLA22211716#reco_item_pos=0&reco_backend=item_decorator&reco_backend_type=function&reco_client=home_items-decorator-legacy&reco_id=6c3198f8-cd57-45fa-87b2-b9faf1d30a79&reco_model=&c_id=/home/bookmarks-recommendations-seed/element&c_uid=8059d461-65c7-41bc-8f5d-031cef3fb992&da_id=bookmark&da_position=0&id_origin=/home/dynamic_access&da_sort_algorithm=ranker",
       resumen: "Recetas en PDF a todo color!",
       detalle: "Incluye: housemade ranch, cherry balsamic vinaigrette, creamy chipotle, avocado green goddess, or honey mustard.",
       precio: "$2.000"
@@ -60,6 +63,7 @@
     {
       ancla:"pack 4",
       imagen: "img/packs/Pack-recetas-saludables.PNG",
+      url:"https://www.mercadolibre.com.ar/termo-media-manija-1-l-acero-inoxidable-pico-matero-cebador-color-plateado/p/MLA22211716#reco_item_pos=0&reco_backend=item_decorator&reco_backend_type=function&reco_client=home_items-decorator-legacy&reco_id=6c3198f8-cd57-45fa-87b2-b9faf1d30a79&reco_model=&c_id=/home/bookmarks-recommendations-seed/element&c_uid=8059d461-65c7-41bc-8f5d-031cef3fb992&da_id=bookmark&da_position=0&id_origin=/home/dynamic_access&da_sort_algorithm=ranker",
       titulo: "Pack de comidas saludables 4",
       resumen: "Recetas en PDF a todo color!",
       detalle: "Incluye: housemade ranch, cherry balsamic vinaigrette, creamy chipotle, avocado green goddess, or honey mustard.",
@@ -76,7 +80,9 @@ packs.forEach(pack => {
   li.innerHTML = `
     <div class="card" tabindex="0" >
       <div class="card_image">
+        <a href="${pack.url}" target="__blank">
         <img src="${pack.imagen}" alt="${pack.titulo}">
+        </a>
       </div>
       <div class="card_content">
         <h2 class="card_title">${pack.titulo}</h2>
