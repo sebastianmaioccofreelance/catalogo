@@ -127,9 +127,9 @@ body {
 
 .card:focus, */
 .card:hover {
-  transform: scale(1.05);
+  transform: scale(1.02);
   box-shadow: 0 10px 5px -5px rgba(0, 0, 0, 0.2);
-  outline: 5px dashed var(--aqua);
+  outline: 3px dashed var(--aqua);
   cursor: pointer;
 }
 
